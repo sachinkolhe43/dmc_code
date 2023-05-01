@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script src="./js/dommanipulationdemo.js"></script>
+  
+    <link rel="stylesheet" href="./css/dommanipulationdemo.css"></link>
+</head>
+<body>
+        <div class="div1">
+            <form>
+                name: <input type="text" name="nm" id="nm"><br>
+                address: <textarea rows="5" cols="25"></textarea><br>
+<input type="checkbox" name="selection" id="sel" value="sel" onchange="checkdisplay(event)"><label for="sel">Show form</label>
+            </form>
+        </div>
+        <div id="mydiv" class="div2 myclass">
+            <form>
+                <input type="radio" name="course" id="java" value="java">
+                <label for="java">Java</label>
+                <input type="radio" name="course" id="C++" value="C++">
+                <label for="C++">C++</label>
+                <input type="radio" name="course" id="Python" value="Python">
+                <label for="Python">Python</label><br>
+                <button type="button" name="btn" id="btn" value="btn" onclick="showcourse()">Show courses</button>
+            </form>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <script>
+           $(document).ready(function(){
+            $('#btn').click(function(){
+                //.val() retrieves the value in the text box
+                //$('#n1').val() this is same as
+                //document.getElementById('n1').value
+               var a=parseInt($('#n1').val());
+               var b=parseInt($('#n2').val());
+               //assign the addition to the text box value property
+               $('#result').val(a+b)
+
+            });
+            $('#sub').click(function(){
+               var a=parseInt($('#n1').val());
+               var b=parseInt($('#n2').val());
+               //assign the addition to the text box value property
+               $('#result').val(a-b)
+            })
+
+
+           })
+        </script>
+    </head>
+    <body>
+        n1: <input type="text" name="n1" id="n1"><br>
+        n2: <input type="text" name="n2" id="n2"><br>
+        Result : <input type="text" name="result" id="result"><br>
+        <button type="button" name="btn" id="btn">add data</button>
+        <button type="button" name="btn" id="sub">subtract data</button>
+    </body>
+</html>

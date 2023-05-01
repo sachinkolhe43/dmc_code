@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            //var v;
+            document.write("value : "+v);  //undefined
+            var v=56;
+            document.write("value : "+v);  //56
+            //var f;
+            document.write("value : "+f); //error
+            //let f=56;
+            const c=34;
+            
+            
+            //var is function scope and let is blocked scope
+            function f1(){
+                alert("in function f1");
+                var i=56;
+                if(i>40){
+                    var b=45;
+                    let c=56;
+                }
+                document.write("b:"+b); //+" c: "+c);
+            }
+            f1();
+            document.write("b:"+b)
+        </script>
+    </body>
+</html>

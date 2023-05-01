@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            @keyframes animation1 {
+                from{
+                    background-color: red;
+                    color: blue;
+                    width: 300px;
+                    margin-left: 20px;
+                    margin-top: 50px;
+                }
+                to{
+                    background-color: yellow;
+                    color: blue;
+                    width: 500px;
+                    margin-left: 200px;
+                    margin-top: 200px;
+                }
+            }
+            /* to apply animation effects create keyframes/*/
+            @keyframes animation2 {
+                10%{
+                    background-color: red;
+                    color: blue;
+                    width: 300px;
+                    margin-left: 20px;
+                    margin-top: 50px;
+                }
+                25%{
+                    background-color: yellow;
+                    color: white;
+                    width: 300px;
+                   /* margin-left: 20px;*/
+                    margin-top: 50px;
+                }
+                50%{
+                    background-color: yellow;
+                    color: blue;
+                    width: 500px;
+                    /*margin-left: 200px;*/
+                    margin-top: 200px;
+                }
+                75%{
+
+                }
+                100%{
+
+                }
+            }
+
+            div{
+                height:100px;
+                width:100px;
+                border:2px solid red;
+                background-color: cyan;
+                border-radius:4px;
+                animation-name: animation2;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            this is div with animation
+        </div>
+    </body>
+</html>

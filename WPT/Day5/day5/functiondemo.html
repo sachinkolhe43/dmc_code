@@ -1,0 +1,27 @@
+<html>
+    <head>
+     <script>
+       function add(){
+        var a=parseInt(prompt("enetr number"));
+        var b=parseInt(prompt("enter number"));
+        //to display data in popup window
+        alert("Addition in popup :" +(a+b));
+        //to display data after refreshing the page
+        //document.write("<h2>addtion in browser "+(a+b)+"</h2>");
+        //to display data in console window
+        console.log("addition in console:"+(a+b))
+        // to display data on the same page
+        /*var v=document.getElementById("mydiv");
+        v.innerHTML="<h2>addtion in browser "+(a+b)+"</h2>"*/
+        document.getElementById("mydiv").innerHTML="<h2>addtion in browser "+(a+b)+"</h2>"
+       }
+      // add();
+     </script>
+    </head>
+    <body>
+      <button type="button" name="btn" id="btn" value="add" onclick="add()">add</button>
+      <div id="mydiv">
+       this is div, show result here...
+      </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!--external javascript-->
+        <script src="./js/form2.js"></script>
+        <!--internal javascript-->
+        <style>
+            span{
+                color:red
+            }
+        </style>
+        <script>
+            function validatenum(numid, errmsg){
+                var a=document.getElementById(numid).value;
+                if(isNaN(a)){
+                   // alert("data is not a number");
+                   document.getElementById(errmsg).innerHTML="pls enetr numeric data"
+                   return false;
+                }
+                else{
+                    //alert("data is a number");
+                    document.getElementById(errmsg).innerHTML="";
+                   return true;
+                }
+            }
+            function validateoperation(){
+                var arr=document.getElementsByName("operation");
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].checked){
+                        document.getElementById("errradio").innerHTML="";
+                        return true;
+                    }
+                }
+                document.getElementById("errradio").innerHTML="pls select the operation"
+                return false;
+            }
+            function validatedata(){
+                var flag=validatenum("num1","errnum1");
+                var flag1=validatenum("num2","errnum2");
+                var flag2=validateoperation();
+                if(flag && flag1 &&flag2){
+                    alert("valid data");
+                    
+                }
+                else{
+                    alert("invalid data");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        
+        <form>
+            number 1:<input type="text" name="num1" id="num1"><span id="errnum1">  </span><br>
+            number 2:<input type="text" name="num2" id="num2"><span id="errnum2">  </span><br>
+            Result:<input type="text" name="result" id="result"><br>
+            <input type="radio" name="operation" id="add" value="add"><label for="add">add</label>
+            &nbsp;&nbsp;&nbsp
+            <input type="radio" name="operation" id="sub" value="sub"><label for="sub">subtract</label>
+            &nbsp;&nbsp;&nbsp
+            <input type="radio" name="operation" id="f" value="f"><label for="f">factorial</label><span id="errradio"></span><br>
+            <button type="button" name="btn" id="btn" onclick="validatedata()">calaculate result</button>
+        </form>
+    </body>
+</html>

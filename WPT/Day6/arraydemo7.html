@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            arr=[1,2,3,4,5,10]
+            arr.push(100); //[1,2,3,4,5,10,100]
+            document.write("after push 100---->"+arr+"<br>")
+            arr.pop(); //[1,2,3,4,5,10]
+            document.write("after pop--->"+arr+"<br>")
+            arr.unshift(300); //[300,1,2,3,4,5,10]
+            document.write("after unshift 300--->"+arr+"<br>")
+            arr.shift() //[1,2,3,4,5,10]
+            document.write("after shift--->"+arr+"<br>")
+            document.write("reverse the array---> "+arr.reverse()+"<br>")
+            document.write("sort the array---> "+arr.sort()+"<br>")
+            function compare(a,b){
+                  return a-b
+            }
+            document.write("sort the array---> "+arr.sort((a,b)=>a-b)+"<br>")
+            document.write("sort the array---> "+arr.sort(compare)+"<br>")
+            
+        </script>
+    </body>
+</html>

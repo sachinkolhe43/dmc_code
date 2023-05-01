@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+        var ob={pid:12,pname:'xxx',qty:34,price:3456};
+
+        //constructor function
+        var Product=function(id,nm,q,pr){
+            this.pid=id;
+            this.pname=nm;
+            this.qty=q;
+            this.price=pr;
+            this.display=function(){
+                return  "pid : "+this.pid+" pname: "+this.pname+" qty: "+this.qty+" price : "+this .price
+            }
+        }
+        var p1=new Product(12,'ccc',45,3456);
+        var p2=new Product(144,'xxx',50,222);
+        alert(p1.display());
+        alert(p2.display());
+
+    </script>
+  </body>  
+</html>

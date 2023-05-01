@@ -1,0 +1,37 @@
+<html>
+    <head>
+      <script src="../jquery.js"></script>
+      <script>
+        $(document).ready(function(){
+            var cntb=1;
+            var cnta=1;
+            $('#after').click(function(){
+               $('#mydiv').append("<p id='a"+cnta+"' class='a'>in after p"+cnta+"</p>");
+               cnta++;
+            })
+            $('#before').click(function(){
+                $('#mydiv').prepend("<p id='b"+cntb+"' class='b'>in before p"+cntb+"</p>");
+                cntb++; 
+            })
+            $('#rafter').click(function(){
+                $('p').remove('.a');
+            })
+            $('#rbefore').click(function(){
+                $('p').remove('.b')
+            })
+        })
+      </script>
+    </head>
+    <body>
+        <div id="mydiv">
+        <ul>
+            <li>add before</li>
+            <li>add after</li>
+        </ul>
+        <button type="btn" name="before" id="before" value="before">add before</button>
+        <button type="btn" name="after" id="after" value="after">add after</button>
+        <button type="btn" name="rafter" id="rafter" value="rafter">remove after</button>
+        <button type="btn" name="rbefore" id="rbefore" value="rbefore">remove before</button>
+    </div>
+    </body>
+</html>

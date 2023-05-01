@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        a=12;
+        /*this function is used to show 
+        messages in popup window to user and one ok button*/
+        window.alert("Hello Alert!!!");
+        ans=confirm("do you wnat to continue");
+        if(!ans){ //ans==true
+            console.log("you selected ok ");
+            document.write("this is in browser,you selected ok ")
+        }else{
+            console.log("you selected cancel ");
+            document.write("this is in browser,you selected cancel ")
+        }
+        /* it is popup box with one textbox, data will be always 
+        accepted as string*/
+        name=prompt("enetr number");
+        document.write("Name : "+name);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

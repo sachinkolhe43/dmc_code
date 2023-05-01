@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+        function validatepass(){
+        var passwd=document.getElementById("pass").value;
+        var cpasswd=document.getElementById("cpass").value;
+        if(passwd==cpasswd){
+            document.getElementById("errpass").innerHTML="";
+            alert("valid data");
+            return true;
+        }
+        else{
+            document.getElementById("errpass").innerHTML="password and confirm password not matching";
+            alert("invalid data");
+            return false
+        }
+        }
+        function validateuname(){
+            var name=document.getElementById("uname").value;
+            //trim will remove all leading and trailing spaces
+            //length will check the length of remaining string
+            if(name.trim().length>=3){
+                alert("valid name")
+                return true;
+            }
+            else{
+                alert("invalid name")
+                return false;
+            }
+        }
+        function validatedata(){
+            var flag=validatepass();
+            var flag1=validateuname(); /// to validate for spaces
+            if(flag && flag1){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <form onsubmit="return validatedata()">
+        username :<input type="text" id="uname" name="uname" required minlength="3"> <br>
+        password: <input type="password" id="pass" name="pass"><br>
+        confirm password:  <input type="password" id="cpass" name="cpass"><span id="errpass"></span> <br>
+        <label id="c1">testing</label>
+        Captcha : <input type="text" name="captcha" id="capcha">
+        <button type="submit" name="btn" id="btn" value="login">Login</button>
+        <button type="reset" name="btn" id="btn1" value="reset">cancel</button>
+    </form>
+    </body>
+</html>

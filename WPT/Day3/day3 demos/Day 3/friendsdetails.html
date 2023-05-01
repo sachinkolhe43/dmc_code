@@ -1,0 +1,70 @@
+<html>
+    <body>
+        <form>
+            <table border="2">
+                <tr>
+                    <td>Name :</td>
+                    <td>
+                        <input type="text" id="nm" name="nm" list="namelst">
+                        <datalist id="namelst">
+                            <option value="kishori">
+                            <option value="Rajan">
+                            <option value="Revati">
+                            <option value="Akshay">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><label>Hobbies</label> : </td>
+                    <td>
+                        <input type="checkbox" 
+                        name="hobbies" id="reading" value="reading" checked>
+                        <label for="reading">Reading</label><br/>
+                        <input type="checkbox" 
+                        name="hobbies" id="trekking" value="trekking">
+                        <label for="trekking">trekking</label><br/>
+                        <input type="checkbox" 
+                        name="hobbies" id="biking" value="biking">
+                        <label for="biking">biking</label><br/>
+                        <input type="checkbox" 
+                        name="hobbies" id="eating" value="eating">
+                        <label for="eating">eating</label><br/>
+                        <input type="checkbox" 
+                        name="hobbies" id="sleeping" value="sleeping">
+                        <label for="sleeping">sleeping</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>City</label> :</td>
+                    <td>
+                        <select id="ct" name="city">
+                            <option value="x">----select one---</option>
+                            <option value="pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Nashik">Nashik</option>
+                            <option value="Nagpur">Nagpur</option>
+                            <option value="Jalgaon">Jalgaon</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Courses:</td>
+                    <td>
+                       <select id="course" name="course" size="4" multiselect>
+                          <option value="java">Java</option>
+                          <option value="C++">C++</option>
+                          <option value=".net">.net</option>
+                          <option value="Python">Python</option>
+                          <option value="perl">perl</option>
+                          <option value="OS">OS</option>
+                          <option value="data structure">data structure</option>
+                          <option value="Database">Database</option>
+                       </select>
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

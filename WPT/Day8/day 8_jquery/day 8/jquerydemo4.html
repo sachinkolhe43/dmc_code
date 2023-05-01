@@ -1,0 +1,26 @@
+<html>
+    <head>
+      <script src="../jquery.js"></script>
+      <script>
+        $(document).ready(function(){
+           
+            $('#btn').click(function(){
+                var a=parseInt($('#num').val());
+                for(var i=1;i<=10;i++){
+                    var s=a+" * "+i+" = "+(a*i)+"<br>";
+                    
+                    $('#mydiv').html($('#mydiv').html()+s);
+                }
+                
+            })
+        })
+      </script>
+    </head>
+    <body>
+        Number : <input type="text" name="num" id="num">
+        <button type="button" name="btn" id="btn">show table</button>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

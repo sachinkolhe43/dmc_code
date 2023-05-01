@@ -1,0 +1,31 @@
+<html>
+    <script>
+        function displaycount(){
+            //alert("function called")
+            if(typeof(Storage!==undefined)){
+                if(localStorage.count!==undefined){
+                    // if count property is there increase it by 1
+                    //localStorage.count= parseInt(localStorage.count)+1
+                    localStorage.setItem("count",parseInt(localStorage.getItem("count"))+1)
+                    
+
+                }else{
+                    // if count property is not there then iitialize to 1
+                    //localStorage.count=1;
+                    localStorage.setItem("count",1);
+
+                }
+                document.getElementById("mydiv").innerHTML="you clicked "+localStorage.getItem("count")+"times."
+            }
+            else{
+                alert("browser doesnot support storage API")
+            }
+        }
+    </script>
+    <body>
+        <button type="button" name="btn" id="btn" value="btn" onclick="displaycount()">click me</button>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

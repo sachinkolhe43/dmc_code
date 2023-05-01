@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <script>
+            parr=[{pid:100,pname:'chair',qty:34,price:4567},
+                   {pid:101,pname:'shelf',qty:38,price:5555}]
+            function clearform(){
+                document.getElementById("pid").value="";
+                document.getElementById("pname").value="";
+               document.getElementById("qty").value="";
+                document.getElementById("price").value="";
+            }
+            function displaytable(myarr=parr){
+                var str="<table border='1'><tr><th>product id</th><th>product name</th><th>Quantity</th><th>price</th></tr>";
+                    for(var ob of myarr){
+                        str+="<tr><td>"+ob.pid+"</td><td>"+ob.pname+"</td><td>"+ob.qty+"</td><td>"+ob.price+"</td></tr>"
+                    }
+                    str+='</table>';
+                    document.getElementById("mydiv").innerHTML=str;
+            }
+            function searchproduct(pid){
+                var pos=parr.findIndex(a=>a.pid===pid);
+                return pos;
+            }
+            function deletedata(){
+                var pid=parseInt(document.getElementById("pid").value);
+                var pos=searchproduct(pid);
+                if(pos!==-1){
+                    var msg="pid"+parr[pos].pid+"pname: "+parr[pos].pname;
+                    var ans=confirm(msg+"\ndo you want to delete it")
+                    if(ans){
+                        parr.splice(pos,1);
+                        displaytable();
+                        
+                    }
+                }
+                else{
+                    alert("not found");
+                }
+                //clear the form
+                clearform();
+                //send the focus to first textbox
+                document.getElementById("pid").focus();
+
+            }
+            function updatedata(){
+                var pid=parseInt(document.getElementById("pid").value);
+                var pos=searchproduct(pid);
+                if(pos!==-1){
+                    var q=parseInt(prompt("enter new quantity"));
+                    var pr=parseFloat(prompt("enter new price"));
+                    parr[pos].qty=q;
+                    parr[pos].price=pr;
+                    //display array details in the table form
+                    displaytable();
+                }
+                //clear the form
+                clearform();
+                //send the focus to first textbox
+                document.getElementById("pid").focus();
+                
+            }
+            function displayproductbyprice(){
+                var pr=parseFloat(prompt("enter price"));
+                var arr=parr.filter(a=>a.price>pr);
+                displaytable(arr);
+            }
+            function add(){
+                //retrieve form data
+                var pid=parseInt(document.getElementById("pid").value);
+                var pname=document.getElementById("pname").value;
+                var qty=parseInt(document.getElementById("qty").value);
+                var price=parseFloat(document.getElementById("price").value);
+                //create object 
+                // it will create object
+                //var ob={pid:pid,pname:pname,qty:qty,price:price}
+                var ob={pid,pname,qty,price}
+                console.log(ob);
+                //add data in the array
+                parr.push(ob);
+                //clear the form
+                clearform();
+                //send the focus to first textbox
+                document.getElementById("pid").focus();
+                //display array details in the table form
+                displaytable();
+            }
+        </script>
+    </head>
+    <body onload="displaytable()">
+        <form>
+            pid <input type="text" id="pid" name="pid"><br>
+            pname: <input type="text" id="pname" name="pname"
+            placeholder="enter product name"><br>
+            Quantity : <input type="text" name="qty" id="qty"><br>
+            Price : <input type="text" name="price" id="price"><br>
+            <button type="button" name="btn" id="btn" value="add" onclick="add()">add product</button>
+            <button type="button" name="btn" id="del" value="delete" onclick="deletedata()">delete product</button>
+            <button type="button" name="btn" id="upd" value="update" onclick="updatedata()">update product</button>
+            <button type="button" name="btn" id="disp1" value="display" onclick="displayproductbyprice()">display product > price</button>
+            
+        </form>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

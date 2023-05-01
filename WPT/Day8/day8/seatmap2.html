@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+        var arr=[];
+        function getseatnum(event){
+            //alert("hello   "+event.target.checked+"--->"+event.target.value);
+            if(event.target.checked){
+                arr.push(event.target.value);
+            }
+            //document.getElementById("msg").innerHTML+=arr;
+            document.getElementById("msg").innerHTML="Selected seat numbers:"+arr;
+        }
+    </script>
+    </head>
+    <body>
+        <div>
+            <input type="checkbox" name="seats" id="1" value="1" onchange="getseatnum(event)">
+            <label for="1" >1</label>
+            <input type="checkbox" name="seats" id="2" value="2" onchange="getseatnum(event)">
+            <label for="2">2</label>
+            <input type="checkbox" name="seats" id="3" value="3" onchange="getseatnum(event)">
+            <label for="3">3</label>
+            <input type="checkbox" name="seats" id="4" value="4" onchange="getseatnum(event)">
+            <label for="4">4</label>
+            <input type="checkbox" name="seats" id="5" value="5" onchange="getseatnum(event)">
+            <label for="5">5</label><br>
+            <input type="checkbox" name="seats" id="6" value="6" onchange="getseatnum(event)">
+            <label for="6">6</label>
+            <input type="checkbox" name="seats" id="7" value="7" onchange="getseatnum(event)">
+            <label for="7">7</label>
+            <input type="checkbox" name="seats" id="8" value="8" onchange="getseatnum(event)">
+            <label for="8">8</label>
+            <input type="checkbox" name="seats" id="9" value="9" onchange="getseatnum(event)">
+            <label for="9">9</label>
+            <input type="checkbox" name="seats" id="10" value="10" onchange="getseatnum(event)">
+            <label for="10">10</label>
+        </div>
+        <div>
+            <p id="msg">Selected seat numbers: </p>
+        </div>
+    </body>
+</html>

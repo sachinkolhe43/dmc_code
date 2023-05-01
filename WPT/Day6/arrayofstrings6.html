@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+
+        var arr=["Revati","Rajan","Atharv","Tanaya"];
+        function displaylist(){
+            var str="<ul>";
+             for( var ob of arr){
+                str+="<li>"+ob+"</li>"
+             }   
+            str+="</ul>";
+           //alert(str);
+            document.getElementById("mydiv").innerHTML=str;
+             
+        }
+        var deletedata=()=>{
+            //retrieve the name from the text box
+            var nm=document.getElementById("nm").value;  
+            var pos=arr.findIndex(a=>a===nm)
+            if(pos!==-1){
+                //to delete one value from the given position
+                //splice(position, number of values to be deleted)
+                arr.splice(pos,1);
+                //clear the text box
+                document.getElementById("nm").value="";
+                //set the focus in the text box
+                document.getElementById("nm").focus();
+               displaylist();
+            }
+            else{
+                alert("name not found")
+            }
+        }
+        var updatedata=()=>{
+            var nm=document.getElementById("nm").value; 
+            //accept new name 
+            var newnm=prompt("enter new name");
+            //find the first occurance of the name
+            var pos=arr.findIndex(a=>a===nm)
+            //while(pos!=-1){
+            //if found
+            if(pos!==-1){
+                //delete the one value from the position and replace it with new value
+                arr.splice(pos,1,newnm);
+               // var pos=arr.findIndex(a=>a===nm)
+                //end of while
+                //clear the textbox
+                document.getElementById("nm").value="";
+                //bring the focus
+                document.getElementById("nm").focus();
+                displaylist();
+            }
+            else{
+                alert("not found");
+            }
+
+        }
+        var adddata=()=>{
+            var nm=document.getElementById("nm").value;
+            arr.push(nm);
+            document.getElementById("nm").value="";
+            document.getElementById("nm").focus();
+            displaylist();
+        }
+    </script>
+</head>
+<body onload="displaylist()">
+    <form>
+        name: <input type="text" name="nm" id="nm" autofocus>;
+        <button type="button" name="add" id="add" value="add" onclick="adddata()">add name</button>
+        <button type="button" name="add" id="delete" value="delete" onclick="deletedata()">delete name</button>
+        <button type="button" name="update" id="update" value="update" onclick="updatedata()">update name</button>
+    </form>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

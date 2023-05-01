@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            arr=[1,20,30,45,2,2,3,4,5,10,55,56,34];
+            //to find the first occurance of the value
+            arr.find(a=>{return a>30})
+            document.write("find a>30----->",arr.find(a=>a>30)+"<br>");
+            //to find the position of first occurance of the value which satisfies the condtion, 
+            //and returns -1 if not found
+            //arr.findIndex(a=>{return a>30})
+            document.write("findIndex a>30----->",arr.findIndex(a=>a>30)+"<br>")
+            //to find the all occurance of the value
+           // arr.filter(a=>{return a>30})
+            document.write("filter a>30----->",arr.filter(a=>a>30)+"<br>");
+            arr1=arr.map(a=>a+20);
+            document.write("map ----->",arr1+"<br>");
+            //reduce will reduce the many values to one values
+            s=arr.reduce((a,b)=>a+b);
+            document.write("reduce ----->",s+"<br>")
+        </script>
+    </body>
+</html>

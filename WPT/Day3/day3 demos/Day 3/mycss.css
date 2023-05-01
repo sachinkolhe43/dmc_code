@@ -1,0 +1,12 @@
+h1{
+    background-color: yellow;
+    color:red;
+    border:2px dashed red;
+    box-shadow:5px 5px 5px red;
+    text-shadow:5px 5px 5px blue;
+    text-shadow:5px 5px 5px blue;
+    text-shadow:5px 5px 5px blue;
+}
+p{
+    color:red
+}

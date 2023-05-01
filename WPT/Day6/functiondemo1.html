@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <script>
+      function f1(){
+        alert("in f1 function");
+        //every javascript function has a builtin array
+        //name of the array is arguments
+        for(var i=0;i<arguments.length;i++){
+            document.write(arguments[i]+"<br>")
+        }
+        document.write("<br>");
+        for (var a of arguments){
+
+            document.write(a);
+        }
+      }
+      f1()
+      f1(12,13)
+      f1(3,4,5)
+      var f2=()=>{}  //arrow function doesnot allow use of arguments array
+   </script>
+</head>
+<body>
+    
+</body>
+</html>

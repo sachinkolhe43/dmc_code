@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function changebackground(event){
+                //alert("focus event"+"----->"+event.target.id)
+                event.target.setAttribute("style","background-color:yellow")
+            }
+            function resetbackground(event){
+                //alert("blur event"+"----->"+event.target.id)
+                event.target.setAttribute("style","background-color:white")
+            }
+            function checkkey(event){
+                console.log(event);
+                //event.key will give you the key pressed
+                //event.which will geive you the ascii value of the key
+                console.log(event.target.name+"--->"+event.key+"--->"+event.which)
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        name: <input type="text" name="nm" id="nm" onfocus="changebackground(event)" onblur="resetbackground(event)" onkeypress="checkkey(event)"><br>
+        age: <input type="text" name="age" id="age" onfocus="changebackground(event)" onblur="resetbackground(event)"><br>
+        mobile: <input type="text" name="mob" id="mob" onfocus="changebackground(event)" onblur="resetbackground(event)"><br>
+        email: <input type="text" name="em" id="em" onfocus="changebackground(event)" onblur="resetbackground(event)"><br>
+        hobies: <input type="text" name="hobbies" id="hobbies" onfocus="changebackground(event)" onblur="resetbackground(event)"><br>
+    </body>
+</html>

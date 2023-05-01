@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            var v=12;
+            var v="Kishori"; //redlcareation is allowed
+            let a=23;
+            //let a="test"   //redeclaration is not possible
+            a="test"
+
+            //var is global or function scoped
+            //let is blocked scope
+            var b=23;
+            for(var i=0;i<10;i++){
+                 b=b+i;
+            }
+            document.write("b:"+b); 
+            document.write("i:"+i);  // i is global variable
+
+            var c=23;
+            for(let j=0;j<10;j++){
+                 c=c+i;
+            }
+            document.write("c:"+c); 
+            document.write("j:"+j);   //error j is blocked scope
+
+        </script>
+    </body>
+</html>

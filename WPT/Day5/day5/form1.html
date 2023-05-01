@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+           
+            function addition(){
+                //retrieve the value from a text box with id num1
+               var a=parseInt(document.getElementById("num1").value);
+                var b=parseInt(document.getElementById("num2").value);
+                //assigning the data to result textbox
+               document.getElementById("result").value=a+b;;
+
+            }
+            var subtract=function(){
+                //retrieve the value from a text box with id num1
+                var a=parseInt(document.getElementById("num1").value);
+                var b=parseInt(document.getElementById("num2").value);
+                //assigning the data to result textbox
+               document.getElementById("result").value=a-b;
+
+            }
+            //writing function using arrow(=>) operator
+            var factorial=()=>{
+                //retrieve the value from a text box with id num1
+                var a=parseInt(document.getElementById("num1").value);
+                var f=1;
+                for(var i=1;i<=a;i++){
+                    f=f*i;
+                }
+                document.getElementById("result").value=f;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Number 1: <input type="text" id="num1" name="num1"><br/>
+            Number 2: <input type="text" id="num2" name="num2"><br/>
+            Result  : <input type="text" id="result" name="result" readonly>
+            <button type="button" id="add" name="btn" value="add" onclick="addition()">add</button>
+            <button type="button" id="sub" name="btn" value="sub" onclick="subtract()">subtract</button>
+            <button type="button" id="f" name="btn" value="f" onclick="factorial()">factorial</button>
+            <button type="reset" id="cancel" name="btn" value="cancel">cancel</button>
+        </form>
+    </body>
+</html>

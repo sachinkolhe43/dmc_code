@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div id="mydiv"> </div>
+        <script>
+            arr=[{pid:123,pname:'lays',qty:34,price:56},
+            {pid:125,pname:'cocacola',qty:56,price:60}]
+            var ob={pid:123,pname:'lays',qty:34,price:56};
+            var pid=34
+            var pname='nachos';
+            var q=45;
+            var pr=345;
+            var newob={pid:pid,pname:pname,qty:q,price:pr}
+            arr.push(newob);
+            function displaytable(){
+                var str="<table border='2'><tr><th>product id</th><th>Name</th><th>Quantity</th><th>price</th></tr>"
+                   for(var ob of arr){
+                      str+="<tr><td>"+ob.pid+"</td><td>"+ob.pname+"</td><td>"+ob.qty+"</td><td>"+ob.price+"</td></tr>"
+                   } 
+                    str+="</table>"
+                    document.getElementById("mydiv").innerHTML=str;
+            }
+            displaytable();
+  
+
+        </script>
+
+    </body>
+</html>

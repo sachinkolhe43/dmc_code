@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <!--<script src="../jquery.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <script>
+            
+            $(document).ready(function(){
+                //jquery will be written here
+                //alert("hello world!!")
+                //document.getElementById("btn").addEventListener("click",fucntion(){})
+                $('#btn').click(function(){
+                    //arr=document.getElementsByTagName('p');
+                    //alert("hello")
+                    alert($("#myp").html());
+                })
+ 
+            })
+        </script>
+    </head>
+    <body>
+       <p id="myp">this is para</p>
+       <button type="btn" name="btn" id="btn">click button</button>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            d=new Date();
+            document.write(d);
+            document.write("date netween 1-31"+d.getDate()+"<br>");
+            var m=d.getMonth()+1;
+            document.write("month 0-11----->"+m+"<br>");
+            document.write("year"+d.getFullYear()+"<br>");
+            var d1=new Date(2022,01,01)
+            var d2=new Date(2023,01,01)
+            document.write(d1+"<br>");
+            document.write(d2+"<br>");
+            var diff=d2.getTime()-d1.getTime();
+            //1000*3600*24 will be number of milliseconds in a day
+        days = diff / (1000 * 3600 * 24);
+        document.write("days"+days+"<br>");
+        </script>
+    </body>
+</html>

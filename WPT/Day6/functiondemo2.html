@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            //... is called as rest operator , used for accepting
+            //variable number of parameters
+            //function f2(a,b,...c){}
+            //var f3=function(){}
+            var f4=(...c)=>{
+                for(var ob of c){
+                    document.write(ob+"---->"+typeof(ob)+"<br>");
+                }
+            }
+            f4();
+            f4(1,2,3,4);
+            f4(12,13,14,15,"a","b");
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

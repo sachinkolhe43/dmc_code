@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn').click(function(){
+                   $('p').each(function(index,element){
+                        alert(index+"-->"+$(element).html());
+                        //alert(index+"-->"+$(this).html());
+                    });
+                })
+            })
+        </script>
+    </head>
+     <body>
+            <div>
+                <p>this para1</p>
+                <p>this para2</p>
+                <p>this para3</p>
+                <p>this para4</p>
+                <p>this para5</p>
+                <p>this para6</p>
+            </div>
+            <button type="btn" name="btn" id="btn" value="btn">Click me</button>
+    </body>
+</html>

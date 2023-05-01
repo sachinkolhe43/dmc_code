@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <canvas id="canvas" style="border:2px solid red" name="canvas" width="200px" height="200px"></canvas>
+        <script>
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(300, 100)
+            ctx.stroke();
+            ctx.font = "20px Arial";
+            ctx.fillText("Welcome", 10, 20);
+        </script>
+    </body>
+</html>

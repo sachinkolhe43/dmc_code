@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script>
+            function doaction(){
+              var s=document.getElementById("str").value;
+              var op=document.getElementById("op");
+              //alert(op.selectedIndex);
+              var v=op.options[op.selectedIndex].value;
+              //alert(v);
+              switch(v){
+                case "upper":
+                    //to convert string into uppercase
+                    var result=s.toUpperCase(); 
+                    break;
+                case "lower":
+                    //to convert string into lowercase
+                    var result=s.toLowerCase();
+                    break;
+                case "split":
+                    var ch=prompt("enter delimiter")
+                    //to break the string at given delimiter
+                    result=s.split(ch);
+                    break;
+                case "match":
+                    var pattern=/ain/gi
+                    //to find occurances of pattern, g indicates global, i indicates ignorecase
+                    result=s.match(pattern);
+                    break;
+                case "slice":
+                    start=prompt("enter start index");
+                    stop=prompt("enter stop index");
+                    //to retrieve portion of the string between start and stop, the stop index is ignored
+                    //if you don't specify stop, it will give string from start to end
+                    result=s.slice(start,stop);
+                    break;
+                case "replace":
+                var pattern=/ain/gi
+                //find and replace occurance of regular expression
+                    result=s.replace(pattern,"xxxxxxx")
+                    break;
+                case "charat":
+                    var p=prompt("enter position")
+                    //to retrieve the character at the given position
+                    result=s.charAt(p);
+                    break;
+                case "indexof":
+                    s1=prompt("enter string to search");
+                    // find the index position of the 1 st occurance of the given string
+                    result=s.indexOf(s1);
+                    break;
+                case "concat":
+                    s2=prompt("enter string to concat");
+                    //to concatenate strings
+                    result=s+s2;
+                    //result=s.concat(s2)
+                    break;
+                case "search":
+                //search the first occurance of the pattern
+                var pattern=/ain/gi
+                result=s.search(pattern);
+                break;
+
+              }
+              document.getElementById("mydiv").innerHTML=result;
+
+            }
+        </script>
+       
+    </head>
+    <body>
+        <form>
+            String : <input type="text" name="str" id="str"><br>
+            oeration : 
+            <select name="op" id="op">
+                <option value="upper">convert to uppercase</option>
+                <option value="lower">convert to lowercase</option>
+                <option value="split">split</option>
+                <option value="match">match</option>
+                <option value="slice">slice</option>
+                <option value="replace">replace</option>
+                <option value="charat">charat</option>
+                <option value="indexof">indexOf</option>
+                <option value="concat">concat</option>
+                <option value="search">search</option>
+            </select><br>
+            <button type="button" name="btn" id="btn" onclick="doaction()">do action</button>
+        </form>
+        <div id="mydiv">
+
+        <!-- </div> -->
+    </body>
+</html>
