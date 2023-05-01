@@ -1,0 +1,242 @@
+<html>
+    <body>
+        <pre>
+            at beginning
+            #---------sqlite3demo
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 21 12:03:53 2023
+
+@author: anilk
+"""
+
+import sqlite3
+conn=sqlite3.connect(r"mydb.db")
+if conn!=None:
+    print("connection done")
+else:
+    print("error occured")
+    
+cursor=conn.cursor()
+
+def displaydata():
+    cursor.execute("select * from product")
+    for row in cursor.fetchall():
+        print(f"Id: {row[0]} name: {row[1]} price: {row[2]} qty: {row[3]}")
+
+def addnewproduct():
+    try:
+        pid=int(input("enter pid"))
+        pname=input("enter name")
+        price=float(input("enter price"))
+        qty=int(input("enter qty"))
+        cid=int(input("enter cid"))
+        cursor.execute("insert into product values(?,?,?,?,?)",(pid,pname,price,qty,cid))
+        conn.commit()
+        return True
+    except:
+        return False
+choice=0
+<a name="testmiddle"></a>
+in the middle
+while choice!=6:
+    choice=int(input("""1. add new product
+                     2. delete product by id
+                     3. update product qty, price
+                     4. display all
+                     5. display by id
+                     6. exit"""))
+    if choice==1:
+        status=addnewproduct()
+        if status:
+            print("added successfully")
+        else:
+            print("error found")
+    elif choice==4:
+        displaydata() 
+    elif choice==6:
+        print("thank you for visiting.....")
+    else:
+        print("wrong choice")
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+
+
+
+#-----------decorator1
+
+from decoratordemo import mydecorator
+
+@mydecorator
+def myf2():
+    print("in myf2")
+
+
+myf2()
+
+#-------------------decoratordemo
+
+#authentication 
+#logging
+#audit
+
+def drawLine():
+    print("*"*80)
+    
+def mydecorator1(f):
+    def innerfunction(*t,**kwarg):
+        print("in mydecorator1")
+        print("*"*80)
+        z=f(*t,**kwarg)
+        print("exiting decorator1")
+        return z
+    return innerfunction
+
+@mydecorator1   
+def mydecorator(f):
+    def innerfunction(*t,**kwarg):
+        print("in mydecorator")
+        print("_"*80)
+        z=f(*t,**kwarg)
+        print("exiting decorator")
+        return z
+    return innerfunction
+
+
+@mydecorator   
+def increament(x,y):
+    print(x,y)
+    x=x+1
+    y=y+1
+    print("in icreament",x,y)
+    
+
+@mydecorator     
+def myf1():
+    print("in myf1")
+    
+if __name__=="__main__":
+    increament(x=12,y=13)    #innnerfunction(increament(12,13))
+    #myf1()
+    
+    
+#-----exceptiondemo3
+try:
+    fh=open("testdata.txt","w")
+    s=fh.read(10)
+except:
+    print("error occured")
+finally:
+    print("in finally block")
+    fh.close()
+#-------exceptiondemo2
+
+#create custom exception
+class AgeException(Exception):
+    def __init__(self,msg="error occured"):
+        self.__msg=msg
+    def __str__(self):
+        return self.__msg
+        
+    
+
+try:
+    age=int(input("enter age"))
+    if age<18 or age>60:
+        #raise ValueError("age should be between 18 and 60")
+        raise AgeException("age should be between 18 and 60")
+except AgeException as e:
+    print(e)
+except ValueError:
+    print("pls enetr numeric data")
+except:
+    print("error occured")
+
+
+#------exceptiondemo1
+
+def divide(a,b):
+    try:
+        print("in divide function")
+        return a/b
+    except ZeroDivisionError as e:
+        print("cannot divide number by 0")
+        print(e)
+        raise e
+    #return 0
+
+
+d={"a":10,"b":20}
+for i in range(3):
+    try:
+        num=int(input("enetr number"))
+        ans=num+12
+        print("answer: "+str(ans))
+        k=input("enter key")
+        print(d[k])
+        a=int(input("enter number"))
+        b=int(input("enter number"))
+        try:
+            ans=divide(a,b)
+            print("Division: "+str(ans))
+        except  ZeroDivisionError as e:
+            print("zero division reraised")
+        print("at the end of try block")
+        break
+    except (ValueError,KeyError) as e:
+        print("pls enter numeric data")
+        print(e)
+  
+    except:
+        print("error occurs")
+else:
+    print("pls contact admin, you a/c is blocked")
+    
+#print(dir(locals()['__builtins__']))
+
+#---------------hybrid inheritance
+
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr 20 16:28:13 2023
+
+@author: anilk
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr 20 16:17:30 2023
+
+@author: anilk
+"""
+
+class A:
+    def __init__(self,a1=0,a2=3):
+        self.__a1=a1
+        self.__a2=a2
+    def f1(self):
+        print("in A's f1")
+        
+    def __str__(self):
+        return f" A1: {self.__a1} A2: {self.__a2}"
+
+class B(A):
+    def __init__(self,b1=4,**kwarg):
+        print("in B",kwarg)    #{a1=1,a2=2,c1=11,c2=22}
+        super().__init__(**kwarg)     
+        self.__b1=b1
+    #def f1(self):
+    #     print("in b's f1")
+    def f2(self):
+        print("in b f2")
+    def __str__(self):
+        return super().__str__()+f" B1 : {self.__b1}" 
+        </pre>
+    </body>
+</html>
