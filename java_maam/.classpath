@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_1/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_10/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_2/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_3/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_4/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_5/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_6/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_7/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_8/src"/>
+	<classpathentry kind="src" path="DAY03/src_codes/Day3_9/src"/>
+	<classpathentry excluding="Day1_2/src/|Day1_1/src/" kind="src" path="DAY1"/>
+	<classpathentry kind="src" path="DAY1/Day1_1/src"/>
+	<classpathentry kind="src" path="DAY1/Day1_2/src"/>
+	<classpathentry excluding="Day2_2/src/|Day2_4/src/|Day2_6/src/|Day2_8/src/|Day2_10/src/|Day2_1/src/|Day2_3/src/|Day2_5/src/|Day2_7/src/|Day2_9/src/" kind="src" path="DAY2/source_codes"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_1/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_10/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_2/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_3/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_4/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_5/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_6/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_7/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_8/src"/>
+	<classpathentry kind="src" path="DAY2/source_codes/Day2_9/src"/>
+	<classpathentry kind="output" path="DAY03/src_codes/Day3_1/bin"/>
+</classpath>

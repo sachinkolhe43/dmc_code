@@ -1,0 +1,87 @@
+1.Which of this keyword must be used to inherit a class?
+a) super
+b) this
+c) extent
+d) extends
+ANS.D
+
+2.Which of the following is not an advantage to using inheritance?
+A. Similar classes can be made to behave consistently.
+B. One big superclass can be used instead of many little classes.
+C. ode that is shared between classes needs to be written only once.
+D. Enhancements to a base class will automatically be applied to derived classes.
+Ans. B
+
+3. What are the features reused using Inheritance in Java?
+A. Variables
+B. Constants
+C. Methods
+D. All the above
+Ans :-  D
+
+4. A Java Interface is not considered a class. State TRUE or FALSE.
+A) TRUE
+B) FALSE
+Ans: A
+
+5. Choose a correct statement about Java Interfaces?
+A) Interface contains only abstract methods by default.
+B) A Java class can implement multiple interfaces
+C) An Interface can extend or inherit another Interface.
+D) All the above
+Ans: D
+
+6. All Interface variables are ___ by default in Java.
+A) public
+B) final
+C) public and final
+D) None
+Ans: C
+
+7. Which of the following are valid lambda expressions? 
+A. String a, String b -> System.out.print(a+ b);
+B. () -> return;
+C. (int i) -> i;
+D. (int i) -> i++; return i;
+ANS. C
+
+8.  A process can have
+A. only one thread
+B. one or multiple thread
+C. multiple sub-threads
+D. multiple sub-threads & thread
+
+Ans.  B
+
+9. What is the default relation b/w Thread & Runnable?
+A. Thread extends Runnable
+B. Thread implements Runnable
+C. They are not related
+D. None of these
+Ans.  B
+
+10. What is the name of the method used to start a thread execution?
+A. resume();
+B. run();
+C. start();
+D. init();
+Ans. C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+Question:
+
+Create a java collection for Product to store Product details
+like  id,  name , price;
+Add follwoing product in collection
+1,"HP Laptop",25000f
+2,"Dell Laptop",30000f
+3,"Lenevo Laptop",28000f
+4,"Sony Laptop",28000f
+5,"Apple Laptop",90000f   
+
+Q1: Print all the product which have price less than  30000.
+(Hint:  filtering data without using stream  )
+
+
+------------------------------------------------------------------------------------------------
+Q2: 
+Q1: Print all the product name only which have price equel to  90000f.
+(Hint:  filtering data without using stream  )
+
+--------------------------------------------------------------------------------------------------------
+Q3:
+Find  the sum of price of all products.
+[(Hint:  use map and reduce  )]
+
+
+--------------------------------------------------------------------------------------------------------
+Q4:
+Find  the sum of price of all products.
+[(Hint:  useCollectors  )]
+
+---------------------------------------------------------------------------------------------------------------
+Q5:
+finds min and max product price by using stream.
+
+            
+-------------------------------------------------------------------------------------------------------
+Q6:
+Print the count of product which r having price less than 30000f
+[use filter and count]
+-----------------------------------------------------------------------------------------------------------
+Q7:
+ Converting product List into Set by adding   product having price less than 30000f in set
+[hint : use filer map and Collectors.toSet()) function ]
+    ----------------------------------------------------------------------------------------------------------
+Q8:
+Convert List into Map of key value pair where key = id and price =name
+[use Collectors.toMap ()]
+  
+-----------------------------------------------------------------------------------------------------------
+
+
+
