@@ -1,0 +1,35 @@
+# Data types
+    - null
+    - number
+    - symbol
+    - string
+    - boolean
+    - bigint
+    - undefined
+
+## Object 
+    key:value
+
+    const item ={
+        "harry": true,
+        "Sachin": false,
+        "rahul": true
+    }
+
+    ==> console.log(item["Sachin"])
+
+## Variables
+
+    var a= 45;
+    var b= "Sachin";
+    var c = null;
+    var d= undefined
+    var b = 2;
+    
+    let a = 76;
+    const 
+    a="Sachin"
+
+    console.log(a);
+
+

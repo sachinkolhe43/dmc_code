@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+
+        <script>
+           
+           $(document).click(function(){
+
+                $('table').click(function(){
+
+                    var num=parseInt($('#n').val());
+                    for(var i=1; i<=10; i++){
+
+                        var t=num +" * "+i+" = "+(num*i)+"<br>";
+                        $('#mydiv').html($('#mydiv').html()+t);
+                    }
+                })
+           })
+
+        </script>
+    </head>
+    <body>
+      
+        <section>
+            <table border="2">
+                <tr>
+                    <td>
+                        <label for="n">Enter a Number: </label> <br>
+                        <input type="text" name="n" id="n"> <br>
+                        <button id="table">click me</button>
+                        <div id="mydiv">
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+      
+    </body>
+</html>

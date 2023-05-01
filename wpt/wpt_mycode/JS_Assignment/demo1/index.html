@@ -1,0 +1,28 @@
+<!-- Write a program to accept three positive numbers and output the largest of them. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <script>
+        var num1=parseInt(prompt("Enter a number: "));
+        var num2=parseInt(prompt("Enter a number: "));
+        var num3=parseInt(prompt("Enter a number: "));
+
+        if(num1 > num2 && num1 > num3){
+            document.write("greatest no is: "+num1)
+        }else if(num2 > num1 && num2 > num3){
+            document.write("greatest no is: "+num2)
+        }else{
+            document.write("greatest no is: "+num3)
+
+        }
+    </script>
+  </body>
+</html>

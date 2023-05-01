@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+
+        <script>
+           $(document).ready(function(){
+            $('#add').click(function(){
+                var n1=parseInt($('#nm1').val());
+                var n2=parseInt($('#nm2').val());
+                
+                $('#result').val(n1+n2);
+            })
+
+            $('#sub').click(function(){
+                
+                var n1=parseInt($('#nm1').val());
+                var n2=parseInt($('#nm2').val());
+
+                $('#result').val(n1-n2);
+            })
+           })
+
+
+        </script>
+    </head>
+    <body>
+        
+       <table>
+        <tr>
+            <td>
+                <label for="nm1">Num1: </label>
+            </td>
+            <td>
+                <input type="text" name="nm1" id="nm1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nm2">Num2: </label>
+            </td>
+            <td>
+                <input type="text" name="nm2" id="nm2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="result">Result:  </label>
+            </td>
+            <td>
+                <input type="text" name="result" id="result">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="btn" id="add">Add</button>
+            </td>
+            <td>
+                <button type="btn" id="sub">Sub</button>
+
+            </td>
+        </tr>
+       </table>
+
+    </body>
+</html>

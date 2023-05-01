@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../WPT_Maam_DATA/Day6"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Day6"
+	}
+}

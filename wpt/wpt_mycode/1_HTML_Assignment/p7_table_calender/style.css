@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    margin: 200px;
+    border: 3px solid gray;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+
+.aqua{
+    background-color: aqua;
+}

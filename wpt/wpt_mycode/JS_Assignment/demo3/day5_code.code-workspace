@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../WPT_Maam_DATA/Day5/day5_code"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "JS_Assignment"
+	}
+}

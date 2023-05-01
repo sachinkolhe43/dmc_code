@@ -1,0 +1,125 @@
+<!-- 
+    Add working
+    delete and update is not working
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var arr=["Sachin", "Nikhil", "Rahul", "Gaurav"];
+
+        function displaylist(){
+
+            var str = "<ul>";
+            
+            for( var ob of arr){
+
+                str+="<li>"+ob+"</li>";
+            }
+
+            str+= "</ul>";
+
+            document.getElementById("mydiv").innerHTML=str;
+
+        }
+
+        function adddata(){
+            var nm=document.getElementById("inp").value;
+
+            arr.push(nm);
+
+            document.getElementById("inp").value="";
+            document.getElementById("inp").focus();
+            displaylist();
+        }
+
+        var deletedata=()=>{
+            //retrieve the name from the text box
+            var nm=document.getElementById("inp").value;  
+            var pos=arr.findIndex(a=>a===nm)
+            if(pos!==-1){
+                //to delete one value from the given position
+                //splice(position, number of values to be deleted)
+                arr.splice(pos,1);
+                //clear the text box
+                document.getElementById("nm").value="";
+                //set the focus in the text box
+                document.getElementById("nm").focus();
+               displaylist();
+            }
+            else{
+                alert("name not found")
+            }
+        }
+
+            var updatedata=()=>{
+                var nm=document.getElementById("nm").value; 
+
+                var newnm=prompt("enter new name");
+
+                var pos=arr.findIndex(a=>a==nm)
+
+                if(pos!==-1){
+
+                    arr.splice(pos,i,newnm);
+
+                    document.getElementById("nm").value="";
+                     //bring the focus
+                    document.getElementById("nm").focus();
+                    displaylist();
+                }else{
+                    alert("not found");
+            }
+
+            }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body onload="displaylist()">
+
+    
+    <Section>
+        <form action="">
+          
+        <table border="4">
+           
+            <tr>
+                <th>CRUD OPERATION
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="inp" id="inp">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" name="add" id="add" value="add" onclick="adddata()">Add</button>
+                    <button type="button" name="delete" id="delete" value="delete" onclick="deleletdata()">Delete</button>
+                    <button type="button" name="update" id="update" value="update" onclick="update()">Update</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="" id="mydiv">
+
+                    </div>  
+                </td>
+            </tr>
+       
+        </table>
+    </form>
+    </Section>
+</body>
+</html>

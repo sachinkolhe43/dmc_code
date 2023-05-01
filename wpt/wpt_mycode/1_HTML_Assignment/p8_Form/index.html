@@ -1,0 +1,119 @@
+<!-- 1. Type of problem: technical (e.g. website is down), product do not available, missing
+information about the product
+ii.
+Username (mandatory)
+iii.
+Email (mandatory)
+iv.
+Location (mandatory)
+v.
+Phone (optional)
+vi.
+Description of the problem (mandatory)
+vii.
+Notification of problem solved (optional)
+The mandatory field will have a red asterisk next to the text label. Provide a submit button. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Sachin Kolhe, Gaurav Gupta, Mayur Koli</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="">Intro about the form</label> 
+            <ul>
+                <li>Click on “PG/UG/Ph.D./Certificate Diploma” to access the list of programs.</li> 
+                <li> Choose the program and click on the program name.</li>
+                <li> Before clicking on the program please click on the instructions for filling
+                
+         </div>
+    </section>
+
+    <section>
+        <table cellpadding="6px"cellspacing="5px" >
+
+            <form action="get">
+            <tr>
+                <td>
+                    <label for="problem">Type of a problem : </label>
+                </td>
+                <td>
+                    <input type="text" name="problem" id="problem">
+                </td>
+            </tr>
+
+            <tr>
+
+
+                <td>
+                    <label for="uname">Username: </label>
+                </td>
+                <td>
+                    <input type="text" name="uname" id="uname" required><span>*</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">Email : </label>
+                </td>
+                <td>
+                    <input type="text" name="email" id="email" required><span>*</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="loc">Location : </label>
+                </td>
+                <td>
+                    <input type="text" name="loc" id="loc" required><span>*</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="phone">Phone : </label>
+                </td>
+                <td>
+                    <input type="text" name="phone" id="phone">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="des">Description of the problem : </label>
+                </td>
+                <td>
+                    <input type="text" name="des" id="des" required><span>*</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                   <p>Notification of problem solve</p>
+                </td>
+                
+            </tr>
+
+            <tr class="button">
+                <td colspan="2">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+
+        </form>
+        </table>
+    </section>
+</body>
+</html>

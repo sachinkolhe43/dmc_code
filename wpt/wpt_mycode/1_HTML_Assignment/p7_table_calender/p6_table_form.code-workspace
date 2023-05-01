@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../p6_table_form"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "p7_table_calender"
+	}
+}

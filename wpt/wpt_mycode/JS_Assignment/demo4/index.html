@@ -1,0 +1,40 @@
+<!--Write a function that accepts two numbers 
+    and a operator like (+,-,*, /) from user and 
+    performs the
+    appropriate operation indicated by the operator.-->
+<html>
+  <body>
+    <script>
+
+        var n1=parseInt(prompt("Enter a num1: "));
+        var n2=parseInt(prompt("Enter a num2: "));
+        var op=prompt("Enter operation: ");
+
+        switch(op)
+        {
+            case "+":
+                var add=eval(n1+n2);
+                document.write("Addition is: "+add);
+                break;
+
+            case "-":
+                var add=eval(n1-n2);
+                document.write("Addition is: "+add);
+                break;
+                
+            case "/":
+                var add=eval(n1/n2);
+                document.write("Addition is: "+add);
+                
+                break;
+            case "*":
+                var add=eval(n1*n2);
+                document.write("Addition is: "+add);
+                
+                break;
+
+        }
+        
+    </script>
+  </body>
+</html>

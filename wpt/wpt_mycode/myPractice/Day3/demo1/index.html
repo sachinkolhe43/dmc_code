@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header> <h1>This is header</h1></header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Departments</li>
+            <li>Placements</li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+
+            <form action="post">
+
+
+                <div>
+                    <h1>This is heading</h1>
+                </div>
+                <div>
+                    <label for="">checkbox: </label><br>
+                    <input type="checkbox" name="skills" id="java">
+                    <label for="java">Java</label><br>
+
+                    <input type="checkbox" name="skills" id="Cpp">
+                    <label for="Cpp">Cpp</label><br>
+
+                    <input type="checkbox" name="skills" id="ds">
+                    <label for="ds">Data structures</label><br>
+
+                    <input type="checkbox" name="skills" id="ap">
+                    <label for="ap">App development</label><br>
+
+
+                </div>
+
+                <!-- checkbox -->
+                <div>
+                    <label for="city">City</label>
+                    <select name="city" id="city" size="3" multiselected>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Ahmednagar">Ahmednagar</option>
+                        <option value="Nashik">Nashik</option>
+                    </select>
+                </div>
+
+                <!-- datalist -->
+
+                <div>
+                    <input type="text" id="nm" name="nm" list="namelist">
+                    <datalist name="namelist">
+                        <option value="Sachin"></option>
+                        <option value="Nikhil"></option>
+                        <option value="Mayur"></option>
+                        <option value="Omkar"></option>
+                    </datalist>
+
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            alert("Hey i am function!!");
+
+            for(var i=0; i<arguments.length; i++){
+                document.write(arguments[i]+"<br/>")
+            }
+        }
+
+        f1();
+        f1(12,12,12);
+        f1('Sachin','Rahul');
+
+        var f2=()=>{}; // arraw function dosent allow to write argumnt array
+    </script>
+</body>
+</html>

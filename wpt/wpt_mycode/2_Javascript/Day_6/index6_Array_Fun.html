@@ -1,0 +1,23 @@
+<html>
+    <body>
+        
+        <script>
+            arr=[1,2,3,4];
+            arr.push(100,12);
+            arr.pop();
+            
+            arr.unshift(20,30,40);
+            arr.shift();
+        
+            function compare(a,b){
+                return a-b;
+            }
+
+            document.write("Sort the array: => "+arr.sort((a,b)=>a-b)+"</br>");
+
+            document.write("Sort the array: => "+arr.sort(compare)+"</br>")
+
+            document.write(arr);
+        </script>
+    </body>
+</html>

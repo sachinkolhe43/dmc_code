@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                // $("p:first-child").css("color","red");
+                // $("p:last-child").css("color","red");
+                // $("div p:nth-child(3)").css("color","red");
+                // $("div p:even").css("color","red");
+                $("div p:odd").css({
+                    "color":"black",
+                    "background-color":"yellow",
+                    "border-radius":"10px"
+                });
+
+                $('body').css({
+                    "background-color":"cyan"
+                })
+            })
+        </script>
+    </head>
+    <body>
+        
+        <div>
+            <p>Sachin</p>
+            <p>Sachin</p>
+            <p>Sachin</p>
+            <p>Sachin</p>
+            <p>Sachin</p>
+            <p>Sachin</p>
+        </div>
+
+        <div>
+            <h1>heading</h1>
+            <p>Nikhil</p>
+            <p>Nikhil</p>
+            <p>Nikhil</p>
+            <h2>Heading</h2>
+            <p>Nikhil</p>
+            <p>Nikhil</p>
+        </div>
+
+    </body>
+</html>

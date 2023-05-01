@@ -1,0 +1,53 @@
+<html>
+    <!-- Write a program to find sum of digits of given five-digit number. -->
+    <head>
+
+        <script src="../jquery.js"></script>
+        <script>
+            
+            $(document).ready(function(){
+                $("#mydiv").click(function(){
+                    var n=parseInt($('#nm').val());
+                    alert(n);
+                    var sum=0;
+                    while(n != 0){
+
+                        sum = sum + n%10;
+                        n = parseInt(n / 10);
+
+                    }
+                    $('#mydiv').html(sum);
+                })
+            })
+            
+        </script>
+    </head>
+    <body>
+
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nm">Enter a number: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="nm" id="nm" placeholder="Enter 5 digit number">
+                    </td>
+                    <tr>
+                        <td>
+                            <button id="btn">Click Me</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="mydiv">
+
+                            </div>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </section>
+
+    </body>
+</html>

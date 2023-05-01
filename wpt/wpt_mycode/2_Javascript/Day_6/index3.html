@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        button{
+            margin-left:30%;
+        }
+    </style>
+    <script>
+        function doaction(){
+            var s=document.getElementById("str").value;
+            var op=document.getElementById("result");
+
+            var v=op.options[op.selectedIndex].value;
+            
+            switch(v){
+                case "upper":
+                    //to convert string into uppercase
+                    var result=s.toUpperCase(); 
+                    break;
+                case "lower":
+                    //to convert string into lowercase
+                    var result=s.toLowerCase();
+                    break;
+                case "split":
+                    var ch=prompt("enter delimiter")
+                    //to break the string at given delimiter
+                    result=a.split(ch);
+                    break;
+                case "match":
+                    var pattern=/ain/gi
+                    //to find occurances of pattern, g indicates global, i indicates ignorecase
+                    result=a.match(pattern);
+                    break;
+                case "slice":
+                    start=prompt("enter start index");
+                    stop=prompt("enter stop index");
+                    //to retrieve portion of the string between start and stop, the stop index is ignored
+                    //if you don't specify stop, it will give string from start to end
+                    result=a.slice(start,stop);
+                    break;
+                case "replace":
+                var pattern=/ain/gi
+                //find and replace occurance of regular expression
+                    result=a.replace(pattern,"xxxxxxx")
+                    break;
+                case "charat":
+                    var p=prompt("enter position")
+                    //to retrieve the character at the given position
+                    result=a.charAt(p);
+                    break;
+                case "indexof":
+                    s1=prompt("enter string to search");
+                    // find the index position of the 1 st occurance of the given string
+                    result=a.indexOf(s1);
+                    break;
+                case "concat":
+                    s2=prompt("enter string to concat");
+                    //to concatenate strings
+                    result=a+s2;
+                    //result=s.concat(s2)
+                    break;
+                case "search":
+                //search the first occurance of the pattern
+                var pattern=/ain/gi
+                result=s.search(pattern);
+                break;
+
+              }
+              document.getElementById("result").innerHTML=result;
+
+        }
+    </script>
+</head>
+<body>
+    
+    <section>
+        <table border="2" cellpadding="5" cellspacing="5">
+            <tr>
+                <td>
+                    <label for="">Enter String: </label>
+                </td>
+                <td>
+                    <input type="text" name="str" id="str">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="">Result</label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="result" id="result" disabled>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select name="op" id="op">
+                        <option value="upper">convert to uppercase</option>
+                        <option value="lower">convert to lowercase</option>
+                        <option value="split">split</option>
+                        <option value="match">match</option>
+                        <option value="slice">slice</option>
+                        <option value="replace">replace</option>
+                        <option value="charat">charat</option>
+                        <option value="indexof">indexOf</option>
+                        <option value="concat">concat</option>
+                        <option value="search">search</option>
+                    </select>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit" name="submit" id="submit" onclick="doaction()">Action</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

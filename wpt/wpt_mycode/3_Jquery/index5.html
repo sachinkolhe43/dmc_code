@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+
+        <script>
+           
+           $(document).ready(function(){
+            $('#btn').click(function(){
+                $('p').each(function(index,element){
+                    alert(index+"---> "+$(element).html());
+                });
+            })
+           })
+
+        </script>
+    </head>
+    <body>
+      
+        <div>
+            <p>para 1</p>
+            <p>para 2</p>
+            <p>para 3</p>
+            <p>para 4</p>
+        </div>
+        <button id="btn">Click</button>
+      
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div>
+        <h1>Internet Usage Servey   </h1>
+
+        <p>This survey is being conducted to help identify the internet usage</p>
+
+        <table border="2" cellspacing="5" cellpadding="20">
+            <form action="post">
+                <tr>
+                    <td>
+                        <label for="">what type of internet connection you have? (selct one)</label>
+                    </td>
+                    <td>
+                        <select name="" id="it">
+                            <option value="" name="it">Dial-up</option>
+                            <option value="" name="it">DSL</option>
+                            <option value="" name="it">High Speed Cable</option>
+                            <option value="" name="it">Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="">what type of computer you use most at home?</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="r1" id="desktop">
+                        <label for="desktop">Desktop</label>
+
+                        <input type="radio" name="r1" id="laptop">
+                        <label for="laptop">Laptop</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="">How would you describe youe main reson for using the internet?</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="r2" id="d1">
+                        <label for="d1">To do work related activities</label><br/>
+
+                        <input type="radio" name="r2" id="d2">
+                        <label for="d2">To do school related activities</label> <br/>
+
+                        <input type="radio" name="r2" id="d3">
+                        <label for="d3">For entertainment purpose</label> <br/>
+
+                        <input type="radio" name="r2" id="d4">
+                        <label for="d4">Other activities</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Types of sites visited</legend>
+
+                            <p>What type of websites do you access most often 
+                                <br/>
+                                Check all that apply.
+                            </p>
+                            <input type="radio" name="f2" id="f1">
+                            <label for="f1">Self Improvement</label><br/>
+    
+                            <input type="radio" name="f2" id="f2">
+                            <label for="f2">Entertainment</label> <br/>
+    
+                            <input type="radio" name="f2" id="f3">
+                            <label for="f3">News and Sports</label> <br/>
+
+                            <input type="radio" name="f2" id="f4">
+                            <label for="f4">Reference</label>
+
+                            <input type="radio" name="f2" id="f5">
+                            <label for="f5">Email</label>
+                        </fieldset>
+                    </td>
+                    <td>
+
+                        <fieldset>
+                            <legend>Time spend using internet</legend>
+
+                            <p>
+                                <p>During an average week, how long do you spend online?</p>
+                            </p>
+                            <input type="radio" name="h2" id="h1">
+                            <label for="h1">0-3 Hours</label><br/>
+    
+                            <input type="radio" name="h2" id="h2">
+                            <label for="h2">4-6 Hours</label> <br/>
+    
+                            <input type="radio" name="h2" id="h3">
+                            <label for="h3">7-10 Hours</label> <br/>
+
+                            <input type="radio" name="h2" id="h4">
+                            <label for="h4">11-14 Hours</label> <br/>
+
+                            <input type="radio" name="h2" id="h5">
+                            <label for="h5">15+ Hours</label>
+                        </fieldset>
+                    </td>
+                </tr>
+
+               
+                <tr>
+                    <td colspan="2">
+                        <label for="">Please comment on your opinions concerning Internet Privacy and safety:</label><br/>
+                        <textarea name="" id="" cols="60" rows="6"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="fname">First Name: </label>
+                        <input type="text" name="" id="fname">
+                    </td>
+                    <td>
+                        <label for="lname">Last Name: </label>
+                        <input type="text" name="lname" id="lname">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="age">Age:  </label>
+                        <input type="text" name="zip" id="age">
+                    </td>
+                    <td>
+                        <label for="zip">Zip Code: </label>
+                        <input type="text" name="zip" id="zip">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Clear Form</button>
+                    </th>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+</html>
