@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <script>
+            var cnt=1;
+            $(document).ready(function(){
+                $("#one").one("click",function(){
+                    alert("In one time event")
+                })
+                // on function will assign the event, use this function
+                // if you want to remove this event after some action
+                $('#add').on("click",function(){
+                    //create a copy of the text box
+                    var inp=$('#location').clone();
+                    /*$(inp).attr({"id":"location"+cnt,
+                    "name":"location"+cnt});*/
+                    $(inp).attr("id","location"+cnt)
+                    cnt++;
+                    $('#list').append(inp);
+                    $('#list').append("<br>");
+
+                });
+
+                $('#disp').click(function(){
+                    // removes the event
+                    $('#add').off("click");
+                    var locations=[]
+                    $('input[name=location]').each(function(index, element){
+                        locations.push($(element).val());
+                    });
+                    $("#mydiv").html(locations.toString())
+
+
+                })
+            })
+            
+        </script>
+    </head>
+    <body>
+        <div id="list">
+           <input type="text" name="location" id="location"> 
+           <button type="button" name="btn" id="add" value="add">Add new</button>
+           <button type="button" name="btn" id="disp" value="disp">display data </button><br>
+           <button type="button" name="btn" id="one" value="one">Onetime event</button><br>
+
+        </div>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

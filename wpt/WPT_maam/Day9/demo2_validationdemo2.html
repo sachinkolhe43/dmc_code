@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <style>
+        .errtext {
+            color: red;
+        }
+    </style>
+    <script src="../Day8_JQuery/day 8_jquery/jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var data = "";
+            // to validate name cannot be empty
+            function validatename() {
+                var nm = $('#nm').val();
+                //whether the name is empty or only spaces
+                if (nm.trim().length > 0) {
+                    //clear the error message
+                    $('#errnm').html("");
+                    data = "name: " + nm + "<br>";
+                    return true;
+                } else {
+                    //display the error message
+                    $('#errnm').html("name cannot be emepty")
+                    return false;
+                }
+
+            }
+            //to validate gender
+            function validategender() {
+                /*var arr=ducument.getElementsByName("gender");
+                for(var ob of arr){
+                    if(ob.checked){
+                        return true;
+                    }
+                }
+                return false;*/
+                var a = $('input[name=gender]:checked').val();
+                //alert(a);
+                if (a === undefined) {
+                    $('#errgender').html("pls select gender")
+                    return false;
+                }
+                $('#errgender').html("");
+                data += "Gender : " + a + "<br>";
+                return true;
+            }
+            //to check hobbies
+            var validatehobbies = function () {
+                var hobbies = [];
+                $('input[name=hobbies]:checked').each(function (index, element) {
+                    hobbies.push($(element).val())
+
+                });
+
+                if (hobbies.length < 2) {
+                    $('#errhobbies').html("select minimum 2 hobbies")
+                    return false;
+                }
+                $('#errhobbies').html("");
+                data += "hobbies: " + hobbies + "<br>"
+                return true;
+
+            }
+            //validate city
+            var validatecity = () => {
+                /*var ob=document.getElementById("city");
+                var val=ob.options[ob.selectedIndex].value*/
+                var v = $('#city option:selected').val()
+                if (v === "test") {
+                    $('#errcity').html("pls select city");
+                    return false;
+                }
+                $('#errcity').html("");
+                data += "city: " + v + "<br>";
+                return true;
+            }
+            //assign click event to button
+            $('#btn').click(function () {
+                //validation for textbox
+                var flag = validatename();
+                var flag1 = validategender();
+                var flag2 = validatehobbies();
+                var flag3 = validatecity();
+                if (flag && flag1 && flag3 && flag2) {
+                    $('#mydiv').html(data);
+                }
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>name:</td>
+                <td>
+                    <input type="text" name="nm" id="nm">
+                </td>
+
+                <td id="errnm" class="errtext"> </td>
+            </tr>
+
+            <tr>
+                <td>gender :</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+                </td>
+
+                <td id="errgender" class="errtext"></td>
+            </tr>
+            <tr>
+                <td>hobbies: </td>
+                <td>
+                    <input type="checkbox" name="hobbies" id="reading" value="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" name="hobbies" id="biking" value="biking">
+                    <label for="biking">biking</label><br>
+                    <input type="checkbox" name="hobbies" id="trekking" value="trekking">
+                    <label for="trekking">trekking</label>
+                    <input type="checkbox" name="hobbies" id="dancing" value="dancing">
+                    <label for="dancing">dancing</label><br>
+                    <input type="checkbox" name="hobbies" id="cycling" value="cycling">
+                    <label for="cycling">cycling</label>
+                </td>
+                <td id="errhobbies" class="errtext"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <select id="city" name="city">
+                        <option value="test">---select one---</option>
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">mumbai</option>
+                        <option value="satara">satara</option>
+                        <option value="karhad">karhad</option>
+                        <option value="nagpur">nagpur</option>
+                    </select>
+                </td>
+                <td id="errcity" class="errtext"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" name="btn" id="btn" value="btn">show data</button></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+    <div id="mydiv">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <style>
+        .myclass{
+            background-color: blue;
+            color:white
+        }
+        .mytest{
+            background-color: yellow;
+            color:black
+        }
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#myp').hover(function(){
+                //function chaining
+               $('#myp').removeClass("myclass")
+                        .addClass("mytest")
+                        
+            },function(){
+                $('#myp').removeClass("mytest")
+                      .addClass("myclass"); 
+
+            })
+        })
+    </script>
+    <body>
+        <p class="myclass" id="myp">this is para</p>
+    </body>
+</html>

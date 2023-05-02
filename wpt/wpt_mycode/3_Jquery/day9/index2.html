@@ -1,0 +1,161 @@
+<html>
+<script src="./jquery.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        var data = "";
+        $("#btn").click(function () {
+            var flag1 = validateName();
+            var flag2 = validateRadio();
+            var flag3 = validateCheckbox();
+            var flag4 = validateDropdown();
+
+            $("#mydiv").html(data);
+            if (flag1 && flag2 && flag3 && flag4) {
+            }
+        })
+
+
+        function validateName() {
+
+            var nm = $("#name").val();
+
+            if (nm.trim().length > 0) {
+                $("name").html("").
+                data += "Name: " + nm + "<br>";
+                return true;
+
+            } else {
+                $("#errname").html("Please Enter your name");
+                return false;
+            }
+
+
+        }
+
+        function validateRadio() {
+
+            var g = $("input[name=gender]:checked").val();
+            if (g === undefined) {
+
+                $("#errradio").html("Please select gender");
+
+            } else {
+                $("errradio").html("");
+                data += "Gender: " + g + "<br>";
+                return true;
+            }
+        }
+
+        // validate checkbox
+
+        function validateCheckbox() {
+
+            var hobbies = [];
+            var a = $("input[name=hob]:checked").each(function (index, element) {
+                hobbies.push($(element).val());
+            })
+
+            if (hobbies.length < 2) {
+                $("#errhobbies").html("Please select min two hobbies")
+                return false;
+            }
+            $("#errhobbies").html("")
+            data += "Hobbies: " + hobbies + "<br>";
+            return true;
+
+
+        }
+        // validate dropdown
+
+        function validateDropdown() {
+
+            var a = $("#city option:selected").val();
+
+            if (a === "test") {
+                $("#errcity").html("Please select city..");
+                return false;
+            }
+
+            $("errcity").html("");
+            data += "City: "+ a +"<br>";
+            return true;
+        }
+
+
+
+    })
+</script>
+
+<body>
+    <section>
+        <table border="2">
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="name" id="name"></td>
+                <td id="errname"></td>
+            </tr>
+
+
+            <tr>
+                <td>Gender: </td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">male</label>
+
+
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">female</label>
+                </td>
+                <td id="errradio"></td>
+            </tr>
+
+            <tr>
+                <td>Hobbies: </td>
+                <td>
+                    <input type="checkbox" name="hob" id="playing" value="playing">
+                    <label for="playing">Playing</label>
+
+                    <input type="checkbox" name="hob" id="reading" value="reading">
+                    <label for="reading">Reading</label> <br>
+
+                    <input type="checkbox" name="hob" id="codding" value="codding">
+                    <label for="codding">Codding</label>
+
+                    <input type="checkbox" name="hob" id="music" value="music">
+                    <label for="music">Listning Music</label>
+
+
+                </td>
+                <td id="errhobbies"></td>
+            </tr>
+
+            <tr>
+                <td>City: </td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="test">----select location----</option>
+                        <option value="Ahmednagar">Ahmednagar</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nashik">Nashik</option>
+                    </select>
+                </td>
+                <td id="errcity"></td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <button id="btn">Click Me</button>
+                </td>
+            </tr>
+        </table>
+
+        <div id="mydiv">
+
+        </div>
+    </section>
+</body>
+
+</html>

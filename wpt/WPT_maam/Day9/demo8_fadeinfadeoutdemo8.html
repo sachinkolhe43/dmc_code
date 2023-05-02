@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('#fadein').click(function(){
+                  $('#div1').fadeIn(600,function(){
+                    console.log("show complete");
+                  });
+                  $('#div2').fadeOut(600,function(){
+                    console.log("hide complete");
+                  })
+               });
+               $('#fadeout').click(function(){
+                $('#div1').fadeOut(800);
+                $('#div2').fadeIn(800);
+
+               });
+               $('#fadeto').click(function(){
+                $('#div1').fadeTo(800,0.3);
+                $('#div2').fadeTo(800,0.3);
+               })
+            })
+        </script>
+    </head>
+    <body>
+        <button type="button" name="fadein" id="fadein" value="fadein">fadein</button>
+        <button type="button" name="fadeout" id="fadeout" value="fadeout">fadeout</button>
+        <button type="button" name="fadeto" id="fadeto" value="fadeto">fadeto</button>
+        <div id="div1">
+            <img src="../../images/flowers.png" width="100px" height="100px">
+        </div>
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+    </body>
+</html>

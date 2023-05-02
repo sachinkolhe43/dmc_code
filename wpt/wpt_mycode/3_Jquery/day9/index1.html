@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script src="./jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('input[type=text]').focus(function(){
+                $(this).css({
+                    "background-color":"cyan",
+                    "font-size":"20px"
+                })
+            })
+            $('input[type=text]').blur(function(){
+                $(this).css({
+                    "background-color":"pink",
+                    
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <table border="2">
+        <tr>
+            <td>name: <input type="text" name="name" id="name"></td> 
+        </tr>
+        <tr>
+
+            <td>age: <input type="text" name="age" id="age"></td> 
+        </tr>
+        <tr>
+
+            <td>mobile: <input type="text" name="mobile" id="mobile"></td> 
+        </tr>
+        <tr>
+
+            <td>email: <input type="text" name="email" id="email"></td> 
+        </tr>
+        <tr>
+
+            <td>Hobbies: <input type="text" name="Hobbies" id="Hobbies"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

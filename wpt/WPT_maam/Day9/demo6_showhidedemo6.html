@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('#show').click(function(){
+                  $('#div1').show(600,function(){
+                    console.log("show complete");
+                  });
+                  $('#div2').hide(600,function(){
+                    console.log("hide complete");
+                  })
+               });
+               $('#hide').click(function(){
+                $('#div1').hide(800);
+                $('#div2').show(800);
+
+               });
+               $('#toggle').click(function(){
+                $('#div1').toggle(800);
+                $('#div2').toggle(800);
+               })
+            })
+        </script>
+    </head>
+    <body>
+        <button type="button" name="show" id="show" value="show">Show</button>
+        <button type="button" name="show" id="hide" value="hide">Hide</button>
+        <button type="button" name="show" id="toggle" value="toggle">toggle</button>
+        <div id="div1">
+            <img src="../../images/flowers.png" width="100px" height="100px">
+        </div>
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+    </body>
+</html>

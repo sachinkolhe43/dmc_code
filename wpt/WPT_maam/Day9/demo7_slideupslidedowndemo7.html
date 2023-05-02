@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('#slideup').click(function(){
+                  $('#div1').slideUp(600,function(){
+                    console.log("slideup complete");
+                  });
+                  $('#div2').slideDown(600,function(){
+                    console.log("slidedown complete");
+                  })
+               });
+               $('#slidedown').click(function(){
+                $('#div1').slideDown(2000);
+                $('#div2').slideUp(2000);
+
+               });
+               $('#slidetoggle').click(function(){
+                $('#div1').slideToggle(800);
+                $('#div2').slideToggle(800);
+               })
+            })
+        </script>
+    </head>
+    <body>
+        <button type="button" name="slidein" id="slideup" value="slideup">slideup</button>
+        <button type="button" name="slidedown" id="slidedown" value="slidedown">slidedown</button>
+        <button type="button" name="show" id="slidetoggle" value="slidetoggle">slidetoggle</button>
+        <div id="div1">
+            <img src="../../images/flowers.png" width="100px" height="100px">
+        </div>
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('#animate').click(function(){
+                $('#div2').animate({"font-size":"50px","color":"red","width":"300px"},800,function(){
+                    console.log("animation done")
+                })   
+
+               })
+            })
+        </script>
+    </head>
+    <body>
+        <button type="button" name="animate" id="animate" value="animate">animate</button>
+       
+        <div id="div1">
+            <img src="../../images/flowers.png" width="100px" height="100px">
+        </div>
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+    </body>
+</html>

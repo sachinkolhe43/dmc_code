@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('input[type=text]').focus(function(){
+                    $(this).css("background-color","yellow");
+                });
+                $('input[type=text]').blur(function(){
+                    $(this).css("background-color","white");
+                })
+            });
+            
+        </script>
+    </head>
+    
+   
+        <body>
+            name: <input type="text" name="nm" id="nm" ><br>
+            age: <input type="text" name="age" id="age" ><br>
+            mobile: <input type="text" name="mob" id="mob" ><br>
+            email: <input type="text" name="em" id="em" ><br>
+            hobies: <input type="text" name="hobbies" id="hobbies"><br>
+        </body>
+   
+</html>

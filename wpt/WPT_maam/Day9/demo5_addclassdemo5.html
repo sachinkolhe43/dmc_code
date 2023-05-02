@@ -1,0 +1,25 @@
+<html>
+    <style>
+        .myclass{
+            background-color: blue;
+            color:white
+        }
+        .mytest{
+            background-color: yellow;
+            color:black
+        }
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //same function will be called twice, once for mouseover and
+            //second time for mouseout
+            $('#myp').hover(function(){
+                $("#myp").toggleClass("myclass").toggleClass("mytest");
+            })
+        })
+    </script>
+    <body>
+        <p class="myclass" id="myp">this is para</p>
+    </body>
+</html>
