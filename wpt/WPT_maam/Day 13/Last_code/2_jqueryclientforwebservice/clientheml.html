@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                function displaydropdown(result){
+                    var str="<select name='empid' id='empid'>"
+                       for(var ob of result){
+                        str+=`<option value=${ob.empid}>${ob.ename}</option>`
+                       }
+                        str+="</select>";
+                        $('#dropdown').html(str);
+
+                }
+                 function  displayTable(result){
+                    var str="<table><tr><th>employee id</th><th>emp name</th><th>emp sal</th></tr>";
+                    for( var ob of result){
+                        str+=`<tr><td>${ob.empid}</td><td>${ob.ename}</td><td>${ob.sal}</td></tr>`
+                    }
+                    str+="</table>";
+                    $('#mydiv').html(str);   
+                 }
+                 function displaydata(result){
+                    str="emp id: "+result.empid+"<br>";
+                    str+="emp name: "+result.ename+"<br>";
+                    str+="emp sal: "+result.sal+"<br>";
+                    $('#emp').html(str);
+                 }
+                 
+                $('#getbyid').click(function(){
+                    var v=$('#empid option:selected').val();
+                    $.ajax({
+                    async:true,
+                    type:'GET',
+                    url:"http://localhost:3003/employee/"+v,
+                    success:function(result){
+                        displaydata(result);
+
+                    },
+                    error:function(){
+
+                    }
+                 })
+                })
+               $('#getdata').click(function(){
+                 $.ajax({
+                    async:true,
+                    type:'GET',
+                    url:"http://localhost:3003/employees",
+                    success:function(result){
+                        displayTable(result);
+                        displaydropdown(result);
+
+                    },
+                    error:function(){
+
+                    }
+                 })
+               })
+            })
+      
+        </script>
+
+    </head>
+    <body>
+        <button type="button" name="btn" id="getdata" value="getdata">Get data</button>
+        <button type="button" name="btn" id="getbyid" value="getbyid">Get By Id</button>
+        <div id="dropdown">
+
+        </div>
+        <div id="mydiv">
+
+        </div>
+        <div id="emp">
+
+        </div>
+        
+    </body>
+</html>

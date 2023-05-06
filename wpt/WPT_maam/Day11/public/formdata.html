@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function validdata(){
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="/submit-data" method="get" onsubmit="return validdata()">
+            num1 : <input type="text" name="num1" id="num1">
+            num2 : <input type="text" name="num2" id="num2">
+            <button type="submit" name="btn" id="btn" value="add">Add data</button>
+        </form>
+    </body>
+</html>

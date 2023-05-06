@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                   
+                    $.ajax({
+                        async:true,
+                        type:"GET",
+                        url:'https://jsonplaceholder.typicode.com/posts',
+                        success:function(result){
+                            console.log(result);
+                            displayTable(result);
+                            displayDropdown(result);
+                        }
+                    
+                    })
+                })
+                // 
+                var displayTable =(result)=>{
+                    var str='<table border="2"><tr> <td>User ID</td> <td>Id</td> <td>Titile</td> <td>Body</td></tr>';
+                        
+                        for(var ob of result){
+
+                            str+='<tr>'
+                                    +'<td>'+ob.userId+'</td>'
+                                    +'<td>'+ob.id+'</td>'
+                                    +'<td>'+ob.title+'</td>'
+                                    +'<td>'+ob.body+'</td>'
+                                +'</tr>';
+                                    
+                        }
+                        
+                        str+="</table>";
+
+                        $("#mydiv2").html(str);
+
+
+                }
+
+                
+                 function displayDropdown(result){
+                    var str="<select name='id' id='id'>"
+                        for(var ob of result){
+                        str+="<option value="+ob.id+">"+ob.id+"</option>"
+                     }
+                        str+="</select>";
+                        $('#mydiv1').html(str); 
+                } 
+
+                
+
+                // var displayDropdown=(result)=>{
+                //     var str="<select name='id' id='id'>";
+                //        for(var ob of result)
+                //        {
+                //         str+= "<option value="+ob.id+">"+ob.id+"</option>";
+                //        }
+
+                //        str+="</select>";
+
+                //        $("#mydiv1").html(str);
+                // }
+
+            })
+        </script>
+    </head>
+
+    <body>
+        <button type="button" id="btn">show data</button>
+        <div id="mydiv1">
+            djfjebf
+        </div>
+
+        <div id="mydiv3">
+
+        </div>
+        <div id="mydiv2">
+
+        </div>
+
+    </body>
+</html>

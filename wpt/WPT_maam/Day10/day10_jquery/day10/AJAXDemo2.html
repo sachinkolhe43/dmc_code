@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <style>
+            #div2,#div3{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+                float:left;
+
+            }
+        </style>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                alert("hello");
+                function displayTable(result){
+                    var str="<table border='2'><tr><th>user id</th><th>id</th><th>title</th><th>body</th></tr>";
+                     for(var ob of result){
+                        str+="<tr><td>"+ob.userId+"</td><td>"+ob.id+"</td><td>"+ob.title+"</td><td>"+ob.body+"</td></tr>"
+                     }    
+                    str+="</table>";
+                    $('#mydiv1').html(str);
+                }
+                function displaydata(result){
+                    var str="user Id : "+result.userId+"<br>";
+                    str+=" Id : "+result.id+"<br>"
+                    str+="Title : "+result.title+"<br>"
+                    str+="body : "+result.body+"<br>"
+                    $('#div3').html(str);
+                }
+
+                function displaydropdown(result){
+                    var str="<select name='id' id='id'>"
+                        for(var ob of result){
+                        str+="<option value='"+ob.id+"'>"+ob.id+"</option>"
+                     }
+                        str+="</select>";
+                        $('#mydropdown').html(str); 
+                } 
+
+                $('#btnid').click(function(){
+                    var v=$('#id option:selected').val()
+                    $.ajax({
+                        async:true,
+                        type:'GET',
+                        url:"https://jsonplaceholder.typicode.com/posts/"+v,
+                        success:function(result){
+                            console.log(result);
+                            displaydata(result);
+                        },
+                        error:function(xhr,status,err){
+                            console.log(status);
+                            console.log(err);
+                        }
+                    })
+                    
+                })
+
+                $('#btn').click(function(){
+                    $.ajax({
+                    async:true,
+                    type:'GET',
+                    url:"https://jsonplaceholder.typicode.com/posts/",
+                    success:function(result){
+                        console.log(result);
+                        displayTable(result);
+                        displaydropdown(result);
+                    },
+                    error:function(xhr,status,err){
+                        console.log(status);
+                        console.log(err);
+                    }
+
+                })
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+      
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+        <div id="div3">
+
+        </div>
+        <button type="button" name="btn" id="btn" value="btn">send request</button>
+        <button type="button" name="btn" id="btnid" value="btnid">find by id</button>
+        <div id="mydropdown">
+
+        </div>
+       <div id="mydiv1">
+
+       </div>
+    </body>
+</html>

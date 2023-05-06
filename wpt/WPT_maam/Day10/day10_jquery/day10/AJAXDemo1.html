@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            #div2{
+                background-color: yellow;
+                border:2px solid blue;
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin:10px;
+
+            }
+        </style>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                function displayTable(result){
+                    $('#btn').click(function(){
+                        $.ajax({
+                        async:true,
+                        type:'GET',
+                        url:"https://jsonplaceholder.typicode.com/posts/",
+                        success:function(result){
+                            console.log(result);
+                            displayTable(result);
+                            displaydropdown(result);
+                        },
+                        error:function(xhr,status,err){
+                            console.log(status);
+                            console.log(err);
+                        }
+    
+                    })
+                    })
+                    var str="<table border='2'><tr><th>user id</th><th>id</th><th>title</th><th>body</th></tr>";
+                     for(var ob of result){
+                        str+="<tr><td>"+ob.userId+"</td><td>"+ob.id+"</td><td>"+ob.title+"</td><td>"+ob.body+"</td></tr>"
+                     }    
+                    str+="</table>";
+                    $('#mydiv1').html(str);
+                }
+
+                function displaydropdown(result){
+                    var str="<select name='id' id='id'>"
+                        for(var ob of result){
+                        str+="<option value='"+ob.id+"'>"+ob.id+"</option>"
+                     }
+                        str+="</select>";
+                        $('#mydropdown').html(str); 
+                } 
+
+
+
+            })
+        </script>
+
+    </head>
+    <body>
+      
+        <div id="div2">
+            This is div with text
+            <ul>
+                <li>mobile</li>
+                <li>books</li>
+                <li>fruits</li>
+            </ul>
+        </div>
+        <button type="button" name="btn" id="btn" value="btn">send request</button>
+        <div id="mydropdown">
+
+        </div>
+       <div id="mydiv1">
+
+       </div>
+    </body>
+</html>
