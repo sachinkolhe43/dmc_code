@@ -1,0 +1,10 @@
+Implement following functionalities using JDBC for quotes application in a menu-driven program.
+SignIn()
+SignUp()
+ChangeProﬁle()
+ChangePassword()
+displayAllQuotes()
+displayQuotesOfUser() -- input userId from user
+addQuote() -- input userId from user
+editQuote()
+deleteQuoteById()
