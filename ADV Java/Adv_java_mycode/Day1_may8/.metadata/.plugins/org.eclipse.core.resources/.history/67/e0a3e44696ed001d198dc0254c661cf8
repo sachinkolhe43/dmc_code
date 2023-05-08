@@ -1,0 +1,15 @@
+package com.db.quote;
+
+public class UsersPojo {
+
+	
+	
+	
+	public UsersPojo() {}
+	
+	
+	
+	}
+	
+	
+	

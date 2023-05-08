@@ -1,0 +1,15 @@
+package com.db.quote;
+// first_name, last_name, email, passwd, mobile
+public class UsersPojo {
+	
+	String fname;
+	String lname;
+	String email;
+	String passwd;
+	int mobile;
+	
+	
+}
+	
+	
+	
