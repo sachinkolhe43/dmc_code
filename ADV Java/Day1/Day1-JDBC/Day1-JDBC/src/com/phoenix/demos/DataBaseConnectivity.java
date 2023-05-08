@@ -22,14 +22,14 @@ public class DataBaseConnectivity {
 			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","blackthorne");
 			String query="select * from users";
 			String insertQuery="insert into users values('a','b')";
-			Statement stmt=con.createStatement();
+			Statement stmt=con.createStatement();  // Container
 			int updateRowCount= stmt.executeUpdate(insertQuery);
-//			ResultSet rs=stmt.executeQuery(query);
+//			ResultSet rs=stmt.executeQuery(query); // It gives the address of grid 
 			/*
 			 * ResultSetMetaData rsmd=rs.getMetaData(); rsmd.getColumnName(0)
 			 */
 			/*
-			 * while(rs.next()) { System.out.println(rs.getString(1)); }
+			 * while(rs.next()) { System.out.println(rs.getString(1)); } // to check next row is available or not
 			 */
 
 		} catch (ClassNotFoundException e) {
