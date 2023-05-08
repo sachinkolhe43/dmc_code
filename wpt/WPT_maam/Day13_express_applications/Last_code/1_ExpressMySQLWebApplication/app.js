@@ -25,6 +25,7 @@ app.use("/css",express.static(path.resolve(__dirname,"public/css")))
 //app.use("/img",express.static(path.resolve(__dirname,"public/img")))
 app.use("/",routes);
 
+
 //start the server
 app.listen(3003);
 console.log("server is running on port 3003")

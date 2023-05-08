@@ -5,6 +5,9 @@ var router = express.Router()
 
 const connection = require("../db/dbconnect")
 
+router.get('/', function (req, res) {
+    res.render('index', {});
+  });
 //to retrieve all the employee records
 router.get("/emp", function (req, resp) {
     connection.query("select * from employee", function (err, data, fields) {
