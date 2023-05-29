@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+		<div align="left">
+		
+			<h2 th:text="${name}"></h2>
+		
+		</div>
+		<div align="center">
+		
+			<table border="1">
+				
+				<tr align="center">
+					<td colspan="6" >
+					
+						VENDOR DETAILS
+					
+					</td>
+				
+				
+				</tr>
+				<tr th:each="vendor:${dataV}">
+					
+						<td th:text="${vendor.getId}"></td>
+						<td th:text="${vendor.getName}"></td>
+						<td th:text="${vendor.getEmail}"></td>
+						<td th:text="${vendor.getCity}"></td>
+						<td th:text="${vendor.getPhone}"></td>
+						<td th:text="${vendor.getRole}"></td>
+				
+				
+				</tr>
+			
+			</table>
+		
+		
+		</div>
+		
+</body>
+</html>

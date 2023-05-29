@@ -1,0 +1,18 @@
+package com.vendorNadmin.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.vendorNadmin.Repository.VendorRepository;
+import com.vendorNadmin.Service.VendorService;
+
+public class VendorController {
+	
+	@Autowired
+	VendorRepository vendorRepo;
+	
+	@Autowired
+	VendorService VendoeService;
+	
+	
+
+}

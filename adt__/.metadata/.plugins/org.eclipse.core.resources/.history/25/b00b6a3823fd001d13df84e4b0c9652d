@@ -1,0 +1,5 @@
+package com.vendorNadmin.Repository;
+
+public interface VendorRepository {
+
+}

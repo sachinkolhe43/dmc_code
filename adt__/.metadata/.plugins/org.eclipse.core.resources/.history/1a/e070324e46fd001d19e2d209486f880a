@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:"http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border=1>
+<tr th:each="vendor:${vdata}">
+<td th:text="${vendor.getId}">
+
+</tr>
+</table>
+</body>
+</html>

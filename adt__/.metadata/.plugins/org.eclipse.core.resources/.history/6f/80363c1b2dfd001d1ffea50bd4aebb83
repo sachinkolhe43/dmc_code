@@ -1,0 +1,26 @@
+package com.vendorNadmin.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.vendorNadmin.Repository.VendorRepository;
+import com.vendorNadmin.Service.VendorService;
+
+public class VendorController {
+	
+	@Autowired
+	VendorRepository vendorRepo;
+	
+	@Autowired
+	VendorService vendorService;
+	
+	@PostMapping("/login")
+	public String validate(@RequestParam String email,@RequestParam String password)
+	{
+		System.out.println(email);
+		System.out.println(password);
+		boolean valid=vendor
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.vendorNadmin.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.vendorNadmin.Entity.Vendor;
+@Repository
+public interface VendorRepository extends JpaRepository<Vendor, Integer>{
+	
+	public List<Vendor> findByEmailAndPassword(String email,String password);
+	Vendor getVendorById(int id);
+	void deleteVendorById(int id);
+
+}

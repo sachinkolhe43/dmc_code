@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	
+<div align="center">
+
+	<form action="#" th:action="@{/register}" th:object="${vendor}" method="post">
+		
+	ID:	<input type="hidden" th:field="*{id}"> <br>
+	NAME:	<input type="text" th:field="*{name}"><br>
+	PASSWORD:	<input type="text" th:field="*{password}"><br>
+	PHONE:	<input type="text" th:field="*{phone}"><br>
+	CITY:	<input type="text" th:field="*{city}"><br>
+	EMAIL:	<input type="text" th:field="*{email}"><br>
+	ROLE:	<input type="text" th:field="*{role}" value="vendor" readonly><br>
+		<button type="submit">Update</button>
+			
+	
+	
+	</form>
+	<hr>
+		<a th:href = "@{/login}" >Back to Emplyee List</a>
+</div>
+		
+		
+</body>
+</html>

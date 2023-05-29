@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<form action="register" method="post">
+	
+	ENTER ID:	<input type="text" name="id"> <br>
+	ENTER NAME:	<input type="text" name="name"><br>
+	ENTER PASSWORD:	<input type="text" name="password"><br>
+	ENTER PHONE:	<input type="text" name="phone"><br>
+	ENTER CITY:	<input type="text" name="city"><br>
+	ENTER EMAIL:	<input type="text" name="email"><br>
+	ENTER ROLE:	<input type="text" name="role"><br>
+		<button type="submit">Register</button>
+			
+</div>	
+</form>
+</body>
+</html>

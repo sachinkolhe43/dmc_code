@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+	<h1>Employee Management System</h1>
+	<a th:href="@{/addnew}" class="btn">Add Employee</a>
+	<table>
+
+
+		<tr>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Action</td>
+		</tr>
+
+		<tr th:each="emp:${allemplist}">
+			<td th:text="${emp.name}"></td>
+			<td th:text="${emp.email}"></td>
+			<td><a th:href="@{/showUpdate/{id}(id=${emp.id})"
+				class="btn btn-primary">Update</a> 
+				<a th:href="@{/deleteEmp/{id}(id=${emp.id})" class="btn btn-danger">Delete</a></td>
+		</tr>
+	</table>
+</body>
+
+</html>
